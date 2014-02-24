@@ -20,10 +20,10 @@ Here is CSS structure...
 	
 2. TEMPLATE STRUCTURE
 	2.1 header
-	2.2 features
-	2.3 screenshots
+	2.2 aboutus
+	2.3 products
 	2.4 team
-	2.5 download
+	2.5 services
 	2.6 sub footer
 	2.7 contact
 	2.8 footer
@@ -154,7 +154,7 @@ a:hover {
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 	color: #4d656b;
 }
-#screenshots h2, #team h2, #contact h2, #sub_footer h2, #page_subfooter h2 {
+#services h2, #products h2, #team h2, #contact h2, #sub_footer h2, #page_subfooter h2 {
 	background: url(../images/heading-text-divider-line.jpg) no-repeat right;
 	padding-right: 10px;
 	margin: 0 10px 15px 0;
@@ -421,10 +421,13 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 	padding-bottom: 30px;
 	padding-top: 90px;
 }
-#features {
+#aboutus {
 	padding: 110px 0;
 }
-#screenshots {
+#products {
+	padding: 110px 0;
+}
+#services {
 	padding: 110px 0;
 }
 #team {
@@ -433,7 +436,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 #sub_footer {
 	padding: 110px 0;
 }
-#download {
+#clients {
 	padding: 110px 0;
 }
 #contact {
@@ -574,9 +577,9 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 	word-spacing: 13px;
 }
 /*----------------------------------------*/
-/*----- 2.2 features -----*/
+/*----- 2.2 aboutus -----*/
 /*----------------------------------------*/
-#features h1, #features h4 {
+#aboutus h1, #aboutus h4 {
 	text-align: center;
 }
 .icon_bg {
@@ -592,7 +595,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 	float: left;
 }
 /*----------------------------------------*/
-/*----- 2.3 screenshots -----*/
+/*----- 2.3 products -----*/
 /*----------------------------------------*/
 #mycarousel li {
 	background: #fcfcfc;
@@ -654,9 +657,9 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 	float: left;
 }
 /*----------------------------------------*/
-/*----- 2.5 download -----*/
+/*----- 2.5 services -----*/
 /*----------------------------------------*/
-#download h2 {
+#services h2 {
 	text-align: center;
 	margin-bottom: 8px;
 }
@@ -1153,7 +1156,7 @@ color: #82848a;
  height: auto !important;
  padding-bottom: 10px;
 }
-#features, #screenshots, #team, #download, #sub_footer, #contact {
+#aboutus, #products, #services, #team, #clients, #sub_footer, #contact {
  padding: 30px 0;
 }
 #sub_header {
@@ -1228,6 +1231,9 @@ display: none;
 }
 }
 
+.client-div {
+	margin-top: 10px;
+}
 /*============================================================*/
 /*---------- 5. Browser fixes ----------*/
 /*============================================================*/
