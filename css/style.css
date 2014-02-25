@@ -1027,6 +1027,12 @@ textarea:focus, input[type="text"]:focus {
 	top: -5px;
 	right: -5px;
 }
+.client-div {
+	margin-top: 10px;
+}
+.sts {
+	display: block;
+}
 /*============================================================*/
 /*---------- 4. Media queries ----------*/
 /*============================================================*/
@@ -1229,10 +1235,6 @@ text-align: left !important;
 .thumb .zoom {
 display: none;
 }
-}
-
-.client-div {
-	margin-top: 10px;
 }
 /*============================================================*/
 /*---------- 5. Browser fixes ----------*/
