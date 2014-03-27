@@ -1,531 +1,1216 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="description" content="crubod, software, website, consultant" />
-<meta name="keywords" content="web development, python, javascript, css, html, angularjs, nodejs, "/>
-<meta name="author" content="YoKu" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<title>crubod</title>
+<!Doctype html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <title>Crubod</title>
+        <meta name="description" content="Crubod" />
+        <meta name="author" content="ThemeArt" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="http://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" type="text/css" />
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+        <script src="js/jquery-1.10.1.min.js"></script>
+        <script src="http://maps.googleapis.com/maps/api/js?sensor=true"></script> 
+        <script src="js/modernizr.custom.97074.js"></script>
+        <!--[if lt IE 9]>
+        <script src=js/selectivizr.js></script>
+        <script src=js/respond.min.js></script>
+        <![endif]-->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/icon/apple-touch-icon-144-precomposed.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/icon/apple-touch-icon-114-precomposed.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/icon/apple-touch-icon-72-precomposed.png" />
+        <link rel="apple-touch-icon-precomposed" href="images/icon/apple-touch-icon-57-precomposed.png" />
+        <link rel="shortcut icon" href="images/icon/favicon.ico" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <div id="loading"></div>
+            <nav class="navbar navbar-fixed-bottom navbar-default" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="ascensorLink ascensorLink0 navbar-brand home-link" href="#">Crubod</a>
+                    </div>
 
-<!--Fav and touch icons-->
-<link rel="shortcut icon" href="images/icons/favicon.ico">
-<link rel="apple-touch-icon" href="images/icons/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="72x72" href="images/icons/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="114x114" href="images/icons/apple-touch-icon-114x114.png">
+                    <div class="collapse navbar-collapse navbar-ex1-collapse">
+                        <ul class="nav navbar-nav pull-right">
+                            <li class="portfolio-menu"><a class="ascensorLink ascensorLink1" href="#">About</a></li>
+                            <li class="about-menu"><a class="ascensorLink ascensorLink2" href="#">Services</a></li>
+                            <li class="service-menu"><a class="ascensorLink ascensorLink3" href="#">Products</a></li>
+                            <li class="team-menu"><a class="ascensorLink ascensorLink4" href="#">Team</a></li>
+                            <li class="client-menu"><a class="ascensorLink ascensorLink5" href="#">Clients</a></li>
+                            <li class="blog-menu"><a class="ascensorLink ascensorLink6" href="#">Blog</a></li>
+                            <li class="contact-menu"><a class="ascensorLink ascensorLink7" href="#">Contact</a></li>
+                            <li class="follow-menu"><a class="ascensorLink ascensorLink8" href="#">Follow</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div id="ascensor">
+                <section class="section home">
+                    <div class="center-box">
+                        <div class="company-name">
+                            <img src="images/company.png">
+                        </div>
+                        <div class="container" style="text-align:center;">
+                            <div style="color:#CACACA;font-size:25px;">We're under construction</div>
+                            <div style="color:#DADADA;font-size:20px;">10 days left</div>
+                        </div>
+                    </div>
+                </section>
 
-<!--google web font-->
-<link href='http://fonts.googleapis.com/css?family=Vollkorn:400,400italic|Lato:400,300,300italic,400italic' rel='stylesheet' type='text/css'>
+                <section class="section portfolio">
+                    <div class="container">
+                        <h1 class="h1">Portfolio</h1>
+                        <div class="row">
+                            <div class="grid-controls">
+                                <ul>
+                                    <li class="filter" data-filter="all"><a href="#">All</a></li>
+                                    <li class="filter" data-filter="seo"><a href="#">SEO</a></li>
+                                    <li class="filter" data-filter="css"><a href="#">CSS3</a></li>
+                                    <li class="filter" data-filter="mobile"><a href="#">Mobile</a></li>
+                                    <li class="filter" data-filter="html"><a href="#">HTML5</a></li>
+                                </ul>
+                            </div>
+                            <ul id="grid">
+                                <li class="mix mobile seo">
+                                    <a data-toggle="modal" role="button" href="#portfolio-1">
+                                        <img src="images/portfolio/portfolio1.jpg" alt="portfolio" />
+                                        <div>
+                                            <span>Portfolio Name</span>
+                                        </div>
+                                    </a>
+                                    <div class="modal fade" id="portfolio-1" tabindex="-1" role="dialog" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                    <h3 class="h3 modal-title">Portfolio Title</h3>
+        </div>
 
-<!--style sheets-->
-<link rel="stylesheet" media="screen" href="css/style.css"/>
-<link rel="stylesheet" media="screen" href="css/skeleton.css"/>
+        <div class="modal-body">
 
-<!--jquery libraries / others are at the bottom-->
-<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
-<script src="js/modernizr.js" type="text/javascript"></script>
+        <div class="container">
 
-<!--slider scripts starts-->
-<link rel="stylesheet" media="screen" href="css/cslider.css"/>
-<script src="js/jquery.cslider.js" type="text/javascript"></script>
-<script type="text/javascript">
-$(function() {
-	$('#da-slider').cslider({
-	autoplay	: true,
-	interval	: 5000  // time between transitions
-	});
-});
-</script>
-<!--slider scripts ends-->
+        <div class="row">
 
-<!--prettyPhoto scripts starts-->
-<link rel="stylesheet" media="screen" href="css/prettyPhoto.css"/>
-<script src="js/jquery.prettyPhoto.js" type="text/javascript"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-$('a[data-rel]').each(function() {
-    $(this).attr('rel', $(this).data('rel'));
-});
-$("a[rel^='prettyPhoto[gallery1]']").prettyPhoto({
-	animation_speed: 'fast',
-	slideshow: 5000,
-	autoplay_slideshow: false,
-	opacity: 0.80,
-	show_title: false,
-	theme: 'pp_default', /* light_rounded / dark_rounded / light_square / dark_square / facebook */
-	overlay_gallery: false,
-	social_tools: false,
-	deeplinking:false,
-	changepicturecallback: function(){
-	var $pp = $('.pp_default');
-	if( parseInt( $pp.css('left') ) < 0 ){
-	$pp.css('left', 0 );
-	}
-	}
-});
-});
-</script>
-<!--prettyPhoto scripts ends-->
+        <div class="col-sm-8"><img src="images/portfolio/portfolio1.jpg" class="img-responsive" alt="portfolio" />
+        </div>
 
-<!--carousel scripts starts-->
-<link rel="stylesheet" media="screen" href="css/jcarousel.css"/>
-<script src="js/jquery.jcarousel.min.js" type="text/javascript"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-var $postcarousel = $('#mycarousel');
-if( $postcarousel.length ) {
-	var scrollCount;
-	if( $(window).width() < 480 ) {
-    scrollCount = 1;
-    } else if( $(window).width() < 768 ) {
-    scrollCount = 1;
-    } else if( $(window).width() < 960 ) {
-    } else {
-    scrollCount = 1;
-    }
-    $postcarousel.jcarousel({
-    easing: 'easeInOutQuint',
-    animation: 600,
-    scroll    : scrollCount
-});
-}
-});
-</script>
-<!--carousel scripts ends-->
+        <div class="col-sm-4">
 
-<!--contact form scripts starts-->
-<script src="js/jquery.validate.js" type="text/javascript"></script>
-<script src="js/jquery.form.js" type="text/javascript"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-//Contact form
-$(function() {
-	var v = $("#contactform").validate({
-	submitHandler: function(form) {
-	$(form).ajaxSubmit({
-	target: "#result",
-	clearForm: true
-	});
-	}
-	});
-});
-//To clear form field on page refresh
-$('#contactform #message').val('');
-});
-</script>
-<!--contact form scripts ends-->
+        <div class="modal-entery">
 
-</head>
-<body>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p><h4 class="h4">Client</h4> Tom Smith <h4 class="h4">Role</h4> Design, Development, Maintenance <h4 class="h4">Skills</h4> HTML/CSS, PHP, JavaScript/jQuery 
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div></li>
+        <li class="mix html5 seo"><a data-toggle="modal" role="button" href="#portfolio-2"><img src="images/portfolio/portfolio2.jpg" alt="portfolio" />
 
-<!--header_wrapper starts-->
-<div id="header_wrapper" class="scroll-content">
-  <div class="container clearfix"> 
-    
-    <!--header starts-->
-    <div id="header"> 
-      
-      <!--logo starts-->
-      <div class="four columns logo alpha"> <a href="#header_wrapper">
-        <h1><img src="images/logo.png" width="122" height="62" alt="logo"></h1>
-        </a> </div>
-      <!--logo ends--> 
-      
-      <!--menu / navigation starts-->
-      <div id="nav" class="twelve columns omega">
-        <ul>
-          <li><a href="#header_wrapper" class="nav-header_wrapper nav selected">Home</a></li>
-          <li><a href="#aboutus" class="nav-about-us nav">About Us</a></li>
-          <li><a href="#products" class="nav-products nav">Products</a></li>
-          <li><a href="#services" class="nav-services nav">Services</a></li>
-          <li style="display:none;"><a href="#team" class="nav-team nav">Team</a></li>
-          <li><a href="#clients" class="nav-clients nav">Clients</a></li>
-          <li><a href="#contact" class="nav-contact nav">Contact</a></li>
-          <li style="display:none;"><a href="#">More</a>
-            <ul>
-              <li class="firstdroplink"><a href="pricing-3columns.html">Blog</a></li>
-              <li class="lastdroplink"><a href="pricing-4columns.html">Recuitment</a></li>
-            </ul>
-          </li>
+        <div>
+
+        <span>Portfolio Name
+        </span>
+        </div></a>
+
+        <div class="modal fade" id="portfolio-2" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <div class="modal-dialog">
+
+        <div class="modal-content">
+
+        <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h3 class="h3 modal-title">Portfolio Title</h3>
+        </div>
+
+        <div class="modal-body">
+
+        <div class="container">
+
+        <div class="row">
+
+        <div class="col-sm-8"><img src="images/portfolio/portfolio2.jpg" class="img-responsive" alt="portfolio" />
+        </div>
+
+        <div class="col-sm-4">
+
+        <div class="modal-entery">
+
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p><h4 class="h4">Client</h4> Tom Smith <h4 class="h4">Role</h4> Design, Development, Maintenance <h4 class="h4">Skills</h4> HTML/CSS, PHP, JavaScript/jQuery 
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div></li>
+        <li class="mix html"><a data-toggle="modal" role="button" href="#portfolio-3"><img src="images/portfolio/portfolio3.jpg" alt="portfolio" />
+
+        <div>
+
+        <span>Portfolio Name
+        </span>
+        </div></a>
+
+        <div class="modal fade" id="portfolio-3" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <div class="modal-dialog">
+
+        <div class="modal-content">
+
+        <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h3 class="h3 modal-title">Portfolio Title</h3>
+        </div>
+
+        <div class="modal-body">
+
+        <div class="container">
+
+        <div class="row">
+
+        <div class="col-sm-8"><img src="images/portfolio/portfolio3.jpg" class="img-responsive" alt="portfolio" />
+        </div>
+
+        <div class="col-sm-4">
+
+        <div class="modal-entery">
+
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p><h4 class="h4">Client</h4> Tom Smith <h4 class="h4">Role</h4> Design, Development, Maintenance <h4 class="h4">Skills</h4> HTML/CSS, PHP, JavaScript/jQuery 
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div></li>
+        <li class="mix mobile css"><a data-toggle="modal" role="button" href="#portfolio-4"><img src="images/portfolio/portfolio4.jpg" alt="portfolio" />
+
+        <div>
+
+        <span>Portfolio Name
+        </span>
+        </div></a>
+
+        <div class="modal fade" id="portfolio-4" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <div class="modal-dialog">
+
+        <div class="modal-content">
+
+        <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h3 class="h3 modal-title">Portfolio Title</h3>
+        </div>
+
+        <div class="modal-body">
+
+        <div class="container">
+
+        <div class="row">
+
+        <div class="col-sm-8"><img src="images/portfolio/portfolio4.jpg" class="img-responsive" alt="portfolio" />
+        </div>
+
+        <div class="col-sm-4">
+
+        <div class="modal-entery">
+
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p><h4 class="h4">Client</h4> Tom Smith <h4 class="h4">Role</h4> Design, Development, Maintenance <h4 class="h4">Skills</h4> HTML/CSS, PHP, JavaScript/jQuery 
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div></li>
+        <li class="mix css seo"><a data-toggle="modal" role="button" href="#portfolio-5"><img src="images/portfolio/portfolio5.jpg" alt="portfolio" />
+
+        <div>
+
+        <span>Portfolio Name
+        </span>
+        </div></a>
+
+        <div class="modal fade" id="portfolio-5" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <div class="modal-dialog">
+
+        <div class="modal-content">
+
+        <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h3 class="h3 modal-title">Portfolio Title</h3>
+        </div>
+
+        <div class="modal-body">
+
+        <div class="container">
+
+        <div class="row">
+
+        <div class="col-sm-8"><img src="images/portfolio/portfolio5.jpg" class="img-responsive" alt="portfolio" />
+        </div>
+
+        <div class="col-sm-4">
+
+        <div class="modal-entery">
+
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p><h4 class="h4">Client</h4> Tom Smith <h4 class="h4">Role</h4> Design, Development, Maintenance <h4 class="h4">Skills</h4> HTML/CSS, PHP, JavaScript/jQuery 
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div></li>
+        <li class="mix mobile"><a data-toggle="modal" role="button" href="#portfolio-6"><img src="images/portfolio/portfolio6.jpg" alt="portfolio" />
+
+        <div>
+
+        <span>Portfolio Name
+        </span>
+        </div></a>
+
+        <div class="modal fade" id="portfolio-6" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <div class="modal-dialog">
+
+        <div class="modal-content">
+
+        <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h3 class="h3 modal-title">Portfolio Title</h3>
+        </div>
+
+        <div class="modal-body">
+
+        <div class="container">
+
+        <div class="row">
+
+        <div class="col-sm-8"><img src="images/portfolio/portfolio6.jpg" class="img-responsive" alt="portfolio" />
+        </div>
+
+        <div class="col-sm-4">
+
+        <div class="modal-entery">
+
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p><h4 class="h4">Client</h4> Tom Smith <h4 class="h4">Role</h4> Design, Development, Maintenance <h4 class="h4">Skills</h4> HTML/CSS, PHP, JavaScript/jQuery 
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div></li>
+        <li class="mix css html"><a data-toggle="modal" role="button" href="#portfolio-7"><img src="images/portfolio/portfolio7.jpg" alt="portfolio" />
+
+        <div>
+
+        <span>Portfolio Name
+        </span>
+        </div></a>
+
+        <div class="modal fade" id="portfolio-7" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <div class="modal-dialog">
+
+        <div class="modal-content">
+
+        <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h3 class="h3 modal-title">Portfolio Title</h3>
+        </div>
+
+        <div class="modal-body">
+
+        <div class="container">
+
+        <div class="row">
+
+        <div class="col-sm-8"><img src="images/portfolio/portfolio7.jpg" class="img-responsive" alt="portfolio" />
+        </div>
+
+        <div class="col-sm-4">
+
+        <div class="modal-entery">
+
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p><h4 class="h4">Client</h4> Tom Smith <h4 class="h4">Role</h4> Design, Development, Maintenance <h4 class="h4">Skills</h4> HTML/CSS, PHP, JavaScript/jQuery 
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div></li>
+        <li class="mix mobile seo"><a data-toggle="modal" role="button" href="#portfolio-8"><img src="images/portfolio/portfolio8.jpg" alt="portfolio" />
+
+        <div>
+
+        <span>Portfolio Name
+        </span>
+        </div></a>
+
+        <div class="modal fade" id="portfolio-8" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <div class="modal-dialog">
+
+        <div class="modal-content">
+
+        <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h3 class="h3 modal-title">Portfolio Title</h3>
+        </div>
+
+        <div class="modal-body">
+
+        <div class="container">
+
+        <div class="row">
+
+        <div class="col-sm-8"><img src="images/portfolio/portfolio8.jpg" class="img-responsive" alt="portfolio" />
+        </div>
+
+        <div class="col-sm-4">
+
+        <div class="modal-entery">
+
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p><h4 class="h4">Client</h4> Tom Smith <h4 class="h4">Role</h4> Design, Development, Maintenance <h4 class="h4">Skills</h4> HTML/CSS, PHP, JavaScript/jQuery 
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div></li>
+        <li class="mix seo"><a data-toggle="modal" role="button" href="#portfolio-9"><img src="images/portfolio/portfolio9.jpg" alt="portfolio" />
+
+        <div>
+
+        <span>Portfolio Name
+        </span>
+        </div></a>
+
+        <div class="modal fade" id="portfolio-9" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <div class="modal-dialog">
+
+        <div class="modal-content">
+
+        <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h3 class="h3 modal-title">Portfolio Title</h3>
+        </div>
+
+        <div class="modal-body">
+
+        <div class="container">
+
+        <div class="row">
+
+        <div class="col-sm-8"><img src="images/portfolio/portfolio9.jpg" class="img-responsive" alt="portfolio" />
+        </div>
+
+        <div class="col-sm-4">
+
+        <div class="modal-entery">
+
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p><h4 class="h4">Client</h4> Tom Smith <h4 class="h4">Role</h4> Design, Development, Maintenance <h4 class="h4">Skills</h4> HTML/CSS, PHP, JavaScript/jQuery 
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div></li>
+        <li class="mix html seo"><a data-toggle="modal" role="button" href="#portfolio-10"><img src="images/portfolio/portfolio10.jpg" alt="portfolio" />
+
+        <div>
+
+        <span>Portfolio Name
+        </span>
+        </div></a>
+
+        <div class="modal fade" id="portfolio-10" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <div class="modal-dialog">
+
+        <div class="modal-content">
+
+        <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h3 class="h3 modal-title">Portfolio Title</h3>
+        </div>
+
+        <div class="modal-body">
+
+        <div class="container">
+
+        <div class="row">
+
+        <div class="col-sm-8"><img src="images/portfolio/portfolio10.jpg" class="img-responsive" alt="portfolio" />
+        </div>
+
+        <div class="col-sm-4">
+
+        <div class="modal-entery">
+
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p><h4 class="h4">Client</h4> Tom Smith <h4 class="h4">Role</h4> Design, Development, Maintenance <h4 class="h4">Skills</h4> HTML/CSS, PHP, JavaScript/jQuery 
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div></li>
+        <li class="mix mobile css"><a data-toggle="modal" role="button" href="#portfolio-11"><img src="images/portfolio/portfolio11.jpg" alt="portfolio" />
+
+        <div>
+
+        <span>Portfolio Name
+        </span>
+        </div></a>
+
+        <div class="modal fade" id="portfolio-11" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <div class="modal-dialog">
+
+        <div class="modal-content">
+
+        <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h3 class="h3 modal-title">Portfolio Title</h3>
+        </div>
+
+        <div class="modal-body">
+
+        <div class="container">
+
+        <div class="row">
+
+        <div class="col-sm-8"><img src="images/portfolio/portfolio11.jpg" class="img-responsive" alt="portfolio" />
+        </div>
+
+        <div class="col-sm-4">
+
+        <div class="modal-entery">
+
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p><h4 class="h4">Client</h4> Tom Smith <h4 class="h4">Role</h4> Design, Development, Maintenance <h4 class="h4">Skills</h4> HTML/CSS, PHP, JavaScript/jQuery 
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div></li>
+        <li class="mix html css seo"><a data-toggle="modal" role="button" href="#portfolio-12"><img src="images/portfolio/portfolio12.jpg" alt="portfolio" />
+
+        <div>
+
+        <span>Portfolio Name
+        </span>
+        </div></a>
+
+        <div class="modal fade" id="portfolio-12" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <div class="modal-dialog">
+
+        <div class="modal-content">
+
+        <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h3 class="h3 modal-title">Portfolio Title</h3>
+        </div>
+
+        <div class="modal-body">
+
+        <div class="container">
+
+        <div class="row">
+
+        <div class="col-sm-8"><img src="images/portfolio/portfolio12.jpg" class="img-responsive" alt="portfolio" />
+        </div>
+
+        <div class="col-sm-4">
+
+        <div class="modal-entery">
+
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p><h4 class="h4">Client</h4> Tom Smith <h4 class="h4">Role</h4> Design, Development, Maintenance <h4 class="h4">Skills</h4> HTML/CSS, PHP, JavaScript/jQuery 
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div></li>
+        <li class="gap"></li>
         </ul>
-      </div>
-      <!--menu / navigation ends-->
-      
-      <div class="clear"></div>
-    </div>
-    <!--header ends--> 
-    
-    <!--slider starts-->
-    <div id="slider_wrapper">
-      <div id="da-slider" class="da-slider"> 
-        
-        <!--slide one starts-->
-        <div class="da-slide">
-          <h2>Web <strong>Development</strong></h2>
-          <p> There's a voice that keeps on calling me. Down the road, that's where I'll always be. Every stop I make, I make a new friend. Can't stay for long, just turn around and I'm gone again. Maybe tomorrow, I'll want to settle down, I'll just keep moving on.</p>
-          <a style="display:none;" href="#" class="da-link btn_googleplay"></a>
-          <div class="da-img"><img src="images/preview/iphone.png" alt="image"/></div>
         </div>
-        <!--slide one ends--> 
-        
-        <!--slide two starts-->
-        <div class="da-slide">
-          <h2>Innovative <strong>Thoughts</strong></h2>
-          <p>This is my boss, Jonathan Hart, a self-made millionaire, he's quite a guy. This is Mrs H., she's gorgeous and knows how to take care of herself. By the way, my name is Max. I take care of both of them, which ain't easy.</p>
-          <a style="display:none;" href="#" class="da-link btn_appstore"></a>
-          <div class="da-img"><img src="images/preview/light.png" alt="image"/></div>
+        </div></section><section class="section about">
+
+        <div class="container"><h1 class="h1">About</h1>
+
+        <div class="row">
+
+        <div class="col-sm-6 col-md-8 col-lg-8">
+
+        <div id="about-carousel" class="carousel slide">
+
+        <div class="carousel-inner">
+
+        <div class="item active"><img src="images/about/about1.jpg" alt="about-us" />
         </div>
-        <!--slide two ends--> 
-        
-        <!--slide three starts-->
-        <div class="da-slide">
-          <h2>Accuracy &amp;  <strong>Precision</strong> </h2>
-          <p>Knight Rider, a shadowy flight into the dangerous world of a man who does not exist. Michael Knight, a young loner on a crusade to champion the cause of the innocent lorem ipsum, the helpless in a world of criminals who operate above the law.</p>
-          <a style="display:none;" href="#" class="da-link btn_android"></a>
-          <div class="da-img"><img src="images/preview/draw.png" alt="image"/></div>
+
+        <div class="item"><img src="images/about/about2.jpg" alt="about-us" />
         </div>
-        <!--slide three ends--> 
-        
-      </div>
-    </div>
-    
-    <!--slider ends--> 
-    
-    <!--replace slider with following while responsive (in mobile)-->
-    <div id="slider_replace">
-      <div class="eight columns"><img src="images/preview/iphone.png" alt="image"/></div>
-      <div class="eight columns">
-        <h2>Web <strong>Development</strong></h2>
-        <p> There's a voice that keeps on calling me. Down the road, that's where I'll always be. Every stop I make, I make a new friend. Can't stay for long, just turn around and I'm gone again. Maybe tomorrow, I'll want to settle down, Until tomorrow, I'll just keep moving on.</p>
-        <a style="display:none;" href="#" class="btn_googleplay"></a> </div>
-    </div>
-    <!--slider_replace ends--> 
-    
-  </div>
-</div>
-<!--header_wrapper ends--> 
 
-<!--about us section starts-->
-<div id="aboutus" class="container clearfix scroll-content"> 
-  
-  <!--text and button-->
-  <div class="sixteen columns">
-    <h1>About Us</h1>
-    <p class="textstyle1">There's a voice that keeps on calling me. Down the road, that's where I'll always be. Every stop I make, I make a new friend. Can't stay for long, just turn around and I'm gone again. Maybe tomorrow, I'll want to settle down, Until tomorrow, I'll just keep moving on. There's a voice that keeps on calling me. Down the road, that's where I'll always be. Every stop I make, I make a new friend. Can't stay for long, just turn around and I'm gone again. Maybe tomorrow, I'll want to settle down, Until tomorrow, I'll just keep moving on. There's a voice that keeps on calling me. Down the road, that's where I'll always be. Every stop I make, I make a new friend. Can't stay for long, just turn around and I'm gone again. Maybe tomorrow, I'll want to settle down, Until tomorrow, I'll just keep moving on.<a style="display:none;" href="#" class="coloredstrong">Checkout more!</a></p>
-    <div class="centerline">
-      <div class="button_wrapper"> <a href="#" class="btn_yellow"><span>Testimonial</span></a></div>
-    </div>
-  </div>
-  
-  <!--feature one starts-->
-  <div class="four columns">
-    <div class="icon_bg"><img src="images/icons/icon-1.png" width="92" height="92" alt="icon"></div>
-    <h4>Easy & Affordable</h4>
-    <p>There's a voice that keeps on calling me. Down the road, that's where I'll always be. I make a new friend.</p>
-  </div>
-  <!--feature one ends--> 
-  
-  <!--feature two starts-->
-  <div class="four columns">
-    <div class="icon_bg"><img src="images/icons/icon-2.png" width="92" height="92" alt="icon"></div>
-    <h4>Great Support</h4>
-    <p>Barnaby The Bear's my name, never call me Jack or James, I will sing my way to fame, Bear's my name.</p>
-  </div>
-  <!--feature two ends--> 
-  
-  <!--feature three starts-->
-  <div class="four columns">
-    <div class="icon_bg"><img src="images/icons/icon-3.png" width="92" height="92" alt="icon"></div>
-    <h4>Time Saving</h4>
-    <p>Typi non habent claritatem insitam legentis in iis qui facit eorum claritatem lius quod ii legunt saepius. </p>
-  </div>
-  <!--feature three ends--> 
-  
-  <!--feature four starts-->
-  <div class="four columns">
-    <div class="icon_bg"><img src="images/icons/icon-4.png" width="92" height="92" alt="icon"></div>
-    <h4>Always Secured</h4>
-    <p>Barnaby The Bear's my name, never call me Jack or James, I will sing my way to fame, Bear's my name.</p>
-  </div>
-  <!--feature four ends--> 
-  
-</div>
-<!--about us section ends--> 
+        <div class="item"><img src="images/about/about3.jpg" alt="about-us" />
+        </div>
 
-<!--products section starts-->
-<div class="row_color">
-  <div id="products" class="container clearfix scroll-content">
-    <div class="columns sixteen"> 
-      
-      <!--heading (do not remove clear below heading)-->
-      <h1>Products</h1>
-      <p class="textstyle2">There's a voice that keeps on calling me. Down the road, that's where I'll always be. Every stop I make, I make a new friend. Can't stay for long, just turn around and I'm gone again. Maybe tomorrow, I'll want to settle down, Until tomorrow, I'll just keep moving on. There's a voice that keeps on calling me. Down the road, that's where I'll always be. Every stop I make, I make a new friend.</p>
-      <br class="clear"/>
-      <h3>We have worked on these products</h3>
-      <ul class="list2">
-      	<li>SeekersGuru</li>
-      	<li>Yoku - Project Management</li>
-      	<li>YokuCabs</li>
-      	<li>Haana</li>
-      </ul>
-      <!--gallery / carousel starts-->
-      <ul id="mycarousel" class="jcarousel-skin-tango">
-        <li>
-          <div class="thumb"><a href="images/preview/large.jpg" data-rel="prettyPhoto[gallery1]" title="This is title of image"><img src="images/preview/thumb-1.jpg" alt="Image"/><span class="zoom zoom_icon"></span></a> </div>
-        </li>
-        <li>
-          <div class="thumb"><a href="images/preview/large.jpg" data-rel="prettyPhoto[gallery1]" title="This is title of image"><img src="images/preview/thumb-2.jpg" alt="Image"/><span class="zoom zoom_icon"></span></a> </div>
-        </li>
-        <li>
-          <div class="thumb"><a href="images/preview/large.jpg" data-rel="prettyPhoto[gallery1]" title="This is title of image"><img src="images/preview/thumb-3.jpg" alt="Image"/><span class="zoom zoom_icon"></span></a> </div>
-        </li>
-        <li>
-          <div class="thumb"><a href="images/preview/large.jpg" data-rel="prettyPhoto[gallery1]" title="This is title of image"><img src="images/preview/thumb-2.jpg" alt="Image"/><span class="zoom zoom_icon"></span></a> </div>
-        </li>
-        <li>
-          <div class="thumb"><a href="images/preview/large.jpg" data-rel="prettyPhoto[gallery1]" title="This is title of image"><img src="images/preview/thumb-1.jpg" alt="Image"/><span class="zoom zoom_icon"></span></a> </div>
-        </li>
-        <li>
-          <div class="thumb"><a href="images/preview/large.jpg" data-rel="prettyPhoto[gallery1]" title="This is title of image"><img src="images/preview/thumb-1.jpg" alt="Image"/><span class="zoom zoom_icon"></span></a> </div>
-        </li>
-      </ul>
-      <!--gallery / carousel ends--> 
-      
-    </div>
-  </div>
-</div>
-<!--products section ends--> 
+        <div class="item"><img src="images/about/about4.jpg" alt="about-us" />
+        </div>
+        </div><a class="left carousel-control" href="#about-carousel" data-slide="prev">
 
-<!--services section starts-->
-<div class="row_color">
-  <div id="services" class="container clearfix scroll-content">
-    <div class="columns sixteen"> 
-      
-      <!--heading (do not remove clear below heading)-->
-      <h1>Services</h1>
-      <p class="textstyle2">There's a voice that keeps on calling me. Down the road, that's where I'll always be. Every stop I make, I make a new friend. Can't stay for long, just turn around and I'm gone again. Maybe tomorrow, I'll want to settle down, Until tomorrow, I'll just keep moving on. There's a voice that keeps on calling me. Down the road, that's where I'll always be. Every stop I make, I make a new friend.here's a voice that keeps on calling me. Down the road, that's where I'll always be. Every stop I make, I make a new friend. Can't stay for long, just turn around and I'm gone again. Maybe tomorrow, I'll want to settle down, Until tomorrow, I'll just keep moving on. There's a voice that keeps on calling me. Down the road, that's where I'll always be. Every stop I make, I make a new friend.</p>
-      <br class="clear"/>
-      <h3>We Provide these services</h3>
-      <ul class="list1">
-      	<li>Web Deveploment</li>
-      	<li>Mobile Deveploment</li>
-      	<li>Traning</li>
-      	<li>Consultancy services</li>
-      	<li>Support</li>
-      </ul>
-    </div>
-  </div>
-</div>
-<!--services section ends--> 
+        <span class="icon-prev">
+        </span></a><a class="right carousel-control" href="#about-carousel" data-slide="next">
 
-<!--team section starts-->
-<div style="display:none;" id="team" class="container clearfix scroll-content"> 
-  
-  <!--heading here-->
-  <div class="columns sixteen">
-    <h2>The Team</h2>
-    <p class="textstyle2">People behind this organization</p>
-  </div>
-  
-  <!--member one starts-->
-  <div class="one-third column"> <img src="images/preview/team-member2.jpg" alt="image" class="image_left">
-    <h5>Jonhan Hart</h5>
-    <p class="textstyle3">Marketing Executive</p>
-    <ul class="team_info">
-      <li><a href="#"><img src="images/icons/team-social-mail.png" width="16" height="16" alt="icon">Send mail</a></li>
-      <li><a href="#"><img src="images/icons/team-social-url.png" width="16" height="16" alt="icon">http://somecompany.com</a></li>
-      <li><a href="#"><img src="images/icons/team-social-facebook.png" width="16" height="16" alt="icon">Facebook</a></li>
-    </ul>
-    <p>This is my boss, Jonathan Hart, a self-made millionaire, he's quite a guy. This is Mrs H., she's gorgeous, she's one lady who knows how to take care of herself. By the way, my name is Max. I take care of both of them, which ain't easy.</p>
-  </div>
-  <!--member one ends--> 
-  
-  <!--member two starts-->
-  <div class="one-third column"> <img src="images/preview/team-member1.jpg" alt="image" class="image_left">
-    <h5>Alizee Anderson</h5>
-    <p class="textstyle3">Chief of Operations</p>
-    <ul class="team_info">
-      <li><a href="#"><img src="images/icons/team-social-mail.png" width="16" height="16" alt="icon">Send mail</a></li>
-      <li><a href="#"><img src="images/icons/team-social-url.png" width="16" height="16" alt="icon">http://somecompany.com</a></li>
-      <li><a href="#"><img src="images/icons/team-social-linkedin.png" width="16" height="16" alt="icon">Linkedin</a></li>
-    </ul>
-    <p>This is my boss, Jonathan Hart, a self-made millionaire, he's quite a guy. This is Mrs H., she's gorgeous and knows how to take care of herself. By the way, my name is Max. I take care of both of them, which ain't easy.</p>
-  </div>
-  <!--member two ends--> 
-  
-  <!--member three starts-->
-  <div class="one-third column"> <img src="images/preview/team-member3.jpg" alt="image" class="image_left">
-    <h5>James Barnaby</h5>
-    <p class="textstyle3">Chief of Finance</p>
-    <ul class="team_info">
-      <li><a href="#"><img src="images/icons/team-social-mail.png" width="16" height="16" alt="icon">Send mail</a></li>
-      <li><a href="#"><img src="images/icons/team-social-url.png" width="16" height="16" alt="icon">http://somecompany.com</a></li>
-      <li><a href="#"><img src="images/icons/team-social-twitter.png" width="16" height="16" alt="icon">Twitter</a></li>
-    </ul>
-    <p>I never spend much time in school but I taught ladies plenty. It's true I hire my body out for pay, hey hey. I've gotten burned over Cheryl Tiegs, blown up for Raquel Welch. </p>
-  </div>
-  <!--member three ends--> 
-  
-</div>
-<!--team section ends--> 
+        <span class="icon-next">
+        </span></a>
+        </div>
+        </div>
 
-<!--clients section starts-->
-<div class="row_color">
-  <div id="clients" class="container clearfix scroll-content">
-    <div class="columns sixteen"> 
-      <h2>Clients</h2>
-      <div class="sixteen columns client-div">
-      	<h4>Google</h4>
-      	<img src="images/preview/thumb-1.jpg" alt="image" class="image_left">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
-      </div>
-      <div class="sixteen columns client-div">
-      	<h4>Facebook</h4>
-      	<img src="images/preview/thumb-2.jpg" alt="image" class="image_left">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
-      </div>
-    </div>
-  </div>
-</div>
-<!--clients section ends--> 
+        <div class="col-sm-6 col-md-4 col-lg-4">
 
-<!--sub_footer section starts-->
-<div id="sub_footer" class="container clearfix scroll-content"> 
-  
-  <!--about starts-->
-  <div class="one-third column">
-    <h2>The Studio</h2>
-    <p class="textstyle2">Know more</p>
-    <br class="clear"/>
-    <img src="images/preview/the-studio.jpg" width="290" height="110" alt="image" class="image_border">
-    <p>Ten years ago a crack commando unit was sent to prison by a military court for a crime they didn't commit. These men promptly escaped from a maximum security stockade to the Los Angeles underground. Today, still wanted by the government, they survive as soldiers of fortune.</p>
-  </div>
-  <!--about ends--> 
-  
-  <!--testimonial starts-->
-  <div class="one-third column">
-    <h2>Reviews</h2>
-    <p class="textstyle2">People say</p>
-    <br class="clear"/>
-    <ul class="testimonial">
-      <li> <img src="images/preview/logo-img1.png" width="122" height="36" alt="image" class="image_noborder"> "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum." <span>- John Anderson, somecompany.com</span></li>
-      <li> <img src="images/preview/logo-img2.png" width="122" height="36" alt="image" class="image_noborder"> "Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem." <span>- Jack Barnaby, somecompany.com</span></li>
-    </ul>
-  </div>
-  <!--testimonial ends--> 
-  
-  <!--updates starts-->
-  <div class="one-third column">
-    <h2>Updates</h2>
-    <p class="textstyle2">Upgrade to new features & fixes</p>
-    <br class="clear"/>
-    <ul class="updates">
-      <li> <span class="coloredstrong">Version 1.2.4</span> <span class="smallstrong"> ( Released on April 26, 2012 )</span>
-        <div class="divider"></div>
-        <h6>What's new in this version?</h6>
-        <a href="#" class="btn">Upgrade</a> <br class="clear"/>
-        . Enhancements in UI elements<br/>
-        . Added extra functionality </li>
-      <li> <span class="coloredstrong">Version 1.2.5</span> <span class="smallstrong"> ( Released on May 5, 2012 )</span>
-        <div class="divider"></div>
-        <h6>What's new in this version?</h6>
-        <a href="#" class="btn">Upgrade</a> <br class="clear"/>
-        . Enhancements in UI elements<br/>
-        . Lorem ipsum dolor sit amet<br/>
-        . Fiant sollemnes in futurum<br/>
-        . Added extra functionality </li>
-    </ul>
-  </div>
-  <!--updates ends--> 
-  
-</div>
-<!--sub_footer section ends--> 
+        <div class="skills"><h4 class="h4">Our Skills</h4>
 
-<!--contact section starts-->
-<div class="row_color">
-  <div id="contact" class="container clearfix scroll-content"> 
-    
-    <!--heading here-->
-    <div class="columns sixteen">
-      <h2>Get In Touch</h2>
-      <p class="textstyle2">send us your queries</p>
-    </div>
-    
-    <!--contact form starts-->
-    <div class="column two-thirds">
-      <form  id="contactform" method="post" action="submit-form.php">
-        <fieldset>
-          <div class="column one-third alpha">
-            <p>
-              <input name="name"  type="text" placeholder="Name"/>
-            </p>
-            <p>
-              <input name="email"  type="text" placeholder="Email" class="required email"/>
-            </p>
-            <p>
-              <input name="subject"  type="text" placeholder="Subject">
-            </p>
-          </div>
-          <div class="column one-third omega">
-            <p>
-              <textarea name="message" id="message" class="required" placeholder="Message"></textarea>
-            </p>
-            <p class="antispam">Leave this empty: <br />
-              <input name="url" />
-            </p>
-            <p>
-              <input class="submit" type="submit" value="Submit Message"/>
-            </p>
-            <div id="result"></div>
-          </div>
+        <div class="progress">
+
+        <p>HTML/CSS</p>
+
+        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+
+        <div class="progress-percent">
+
+        <span>9.0
+        </span>
+        </div>
+        </div>
+        </div>
+
+        <div class="progress">
+
+        <p>Photoshop</p>
+
+        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+
+        <div class="progress-percent">
+
+        <span>8.0
+        </span>
+        </div>
+        </div>
+        </div>
+
+        <div class="progress">
+
+        <p>WordPress</p>
+
+        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:95%">
+
+        <div class="progress-percent">
+
+        <span>9.5
+        </span>
+        </div>
+        </div>
+        </div>
+
+        <div class="progress">
+
+        <p>SEO</p>
+
+        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:75%">
+
+        <div class="progress-percent">
+
+        <span>7.5
+        </span>
+        </div>
+        </div>
+        </div>
+
+        <div class="skill-q">
+
+        <p class="pull-left">Enaugh for you?</p><button type="button" class="pull-right btn btn-primary"><i class="fa fa-arrow-right"></i> Email us</button>
+        </div>
+        </div>
+        </div>
+        </div>
+
+        <div class="row">
+
+        <div class="col-sm-6 col-md-6 col-lg-6">
+
+        <div class="about-note"><h4 class="h4">Our philosophy</h4>
+
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+        </div>
+        </div>
+
+        <div class="col-sm-6 col-md-6 col-lg-6">
+
+        <div class="about-note"><h4 class="h4">Our goal</h4>
+
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English.</p>
+        </div>
+        </div>
+        </div>
+        </div></section><section class="section service">
+
+        <div class="container"><h1 class="h1">Services</h1>
+
+        <div class="row">
+        <hr class="metro-hr" />
+
+        <div class="col-sm-9">
+
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </div>
+
+        <div class="col-sm-3">
+        <ul class="check-our-work">
+        <li class="portfolio"><a class="ascensorLink ascensorLink1" href="#">Check our Portfolio</a></li>
+        </ul>
+        </div>
+        <hr class="metro-hr" />
+        </div>
+
+        <div class="row">
+
+        <div class="col-sm-6 col-md-4">
+
+        <div class="brick">
+
+        <div class="service-img"><i class="fa fa-cloud-upload fa-5x"></i>
+        </div><h6 class="service-title">Save your time for pleasure!</h6><h4 class="h4">Save On Cloud</h4>
+
+        <p class="service-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4">
+
+        <div class="brick">
+
+        <div class="service-img"><i class="fa fa-print fa-5x"></i>
+        </div><h6 class="service-title">Create your individual website look!</h6><h4 class="h4">Print Your Document</h4>
+
+        <p class="service-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4">
+
+        <div class="brick">
+
+        <div class="service-img"><i class="fa fa-magic fa-5x"></i>
+        </div><h6 class="service-title">Lorem Ipsum is simply dummy text!</h6><h4 class="h4">Magic is in Your Hand</h4>
+
+        <p class="service-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </div>
+        </div>
+        </div>
+
+        <div class="row">
+        <hr class="metro-hr" /><h2 class="h2 lead">Our Features</h2>
+
+        <div class="col-sm-6 col-md-4">
+
+        <div class="feature-box">
+
+        <div class="feature-icon"><i class="fa fa-twitter"></i>
+        </div>
+
+        <div class="feature-text"><h3>Twitter</h3>
+
+        <p>Justo a urna dolor et lorem vulputate.</p>
+        </div>
+        </div>
+
+        <div class="feature-box">
+
+        <div class="feature-icon"><i class="fa fa-magic"></i>
+        </div>
+
+        <div class="feature-text"><h3>FontAwesome Icons</h3>
+
+        <p>Justo a urna dolor et lorem vulputate.</p>
+        </div>
+        </div>
+
+        <div class="feature-box">
+
+        <div class="feature-icon"><i class="fa fa-font"></i>
+        </div>
+
+        <div class="feature-text"><h3>Google Fonts</h3>
+
+        <p>Class aptent taciti sociosqu torquent.</p>
+        </div>
+        </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4">
+
+        <div class="feature-box">
+
+        <div class="feature-icon"><i class="fa fa-move"></i>
+        </div>
+
+        <div class="feature-text"><h3>Bootstrap</h3>
+
+        <p>Justo a urna dolor et lorem vulputate.</p>
+        </div>
+        </div>
+
+        <div class="feature-box">
+
+        <div class="feature-icon"><i class="fa fa-laptop"></i>
+        </div>
+
+        <div class="feature-text"><h3>HTML 5 / CSS 3</h3>
+
+        <p>Duis rutrum faucibus massa sagittis.</p>
+        </div>
+        </div>
+
+        <div class="feature-box">
+
+        <div class="feature-icon"><i class="fa fa-font"></i>
+        </div>
+
+        <div class="feature-text"><h3>Modern</h3>
+
+        <p>Justo a urna dolor et lorem vulputate.</p>
+        </div>
+        </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4">
+
+        <div class="feature-box">
+
+        <div class="feature-icon"><i class="fa fa-twitter"></i>
+        </div>
+
+        <div class="feature-text"><h3>CrossBrowser</h3>
+
+        <p>Justo a urna dolor et lorem vulputate.</p>
+        </div>
+        </div>
+
+        <div class="feature-box">
+
+        <div class="feature-icon"><i class="fa fa-magic"></i>
+        </div>
+
+        <div class="feature-text"><h3>FontAwesome Icons</h3>
+
+        <p>Justo a urna dolor et lorem vulputate.</p>
+        </div>
+        </div>
+
+        <div class="feature-box">
+
+        <div class="feature-icon"><i class="fa fa-font"></i>
+        </div>
+
+        <div class="feature-text"><h3>Google Fonts</h3>
+
+        <p>Class aptent taciti sociosqu torquent.</p>
+        </div>
+        </div>
+        </div>
+        <hr class="metro-hr" />
+        </div>
+        </div></section><section class="section team">
+
+        <div class="container"><h1 class="h1">Creative Team</h1>
+
+        <div class="row">
+
+        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+
+        <div class="team-member"><img src="images/team/team-member1.jpg" alt="team_member" /><h3 class="h3 lead">Tom Smith</h3><h5 class="h5">Founder</h5>
+        <ul class="member-social">
+        <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
+        <li><a href="http://www.facebook.com" target="_blank"><i class="fa fa-facebook fa-2x"></i></a></li>
+        <li><a href="http://www.dribbble.com" target="_blank"><i class="fa fa-dribbble fa-2x"></i></a></li>
+        </ul>
+        </div>
+        </div>
+
+        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+
+        <div class="team-member"><img src="images/team/team-member2.jpg" alt="team_member" /><h3 class="h3 lead">Tom Smith</h3><h5 class="h5">Founder</h5>
+        <ul class="member-social">
+        <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
+        <li><a href="http://www.facebook.com" target="_blank"><i class="fa fa-facebook fa-2x"></i></a></li>
+        <li><a href="http://www.dribbble.com" target="_blank"><i class="fa fa-dribbble fa-2x"></i></a></li>
+        </ul>
+        </div>
+        </div>
+
+        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+
+        <div class="team-member"><img src="images/team/team-member3.jpg" alt="team_member" /><h3 class="h3 lead">Sam Peterson</h3><h5 class="h5">Developer</h5>
+        <ul class="member-social">
+        <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
+        <li><a href="http://www.facebook.com" target="_blank"><i class="fa fa-facebook fa-2x"></i></a></li>
+        <li><a href="http://www.dribbble.com" target="_blank"><i class="fa fa-dribbble fa-2x"></i></a></li>
+        </ul>
+        </div>
+        </div>
+
+        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+
+        <div class="team-member"><img src="images/team/team-member4.jpg" alt="team_member" /><h3 class="h3 lead">John Smith</h3><h5 class="h5">Developer</h5>
+        <ul class="member-social">
+        <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
+        <li><a href="http://www.facebook.com" target="_blank"><i class="fa fa-facebook fa-2x"></i></a></li>
+        <li><a href="http://www.dribbble.com" target="_blank"><i class="fa fa-dribbble fa-2x"></i></a></li>
+        </ul>
+        </div>
+        </div>
+
+        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+
+        <div class="team-member"><img src="images/team/team-member5.jpg" alt="team_member" /><h3 class="h3 lead">Natasha Smith</h3><h5 class="h5">Project Manager</h5>
+        <ul class="member-social">
+        <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
+        <li><a href="http://www.facebook.com" target="_blank"><i class="fa fa-facebook fa-2x"></i></a></li>
+        <li><a href="http://www.dribbble.com" target="_blank"><i class="fa fa-dribbble fa-2x"></i></a></li>
+        </ul>
+        </div>
+        </div>
+
+        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+
+        <div class="team-member"><img src="images/team/team-member6.jpg" alt="team_member" /><h3 class="h3 lead">Jessica Doe</h3><h5 class="h5">Designer</h5>
+        <ul class="member-social">
+        <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
+        <li><a href="http://www.facebook.com" target="_blank"><i class="fa fa-facebook fa-2x"></i></a></li>
+        <li><a href="http://www.dribbble.com" target="_blank"><i class="fa fa-dribbble fa-2x"></i></a></li>
+        </ul>
+        </div>
+        </div>
+        </div>
+        </div></section><section class="section client">
+
+        <div class="center-box">
+
+        <div class="container"><h1 class="h1">Happy Clients</h1><h3 class="h3 lead">What they say about our Services.</h3>
+
+        <div class="row">
+
+        <div class="col-sm-6 col-sm-push-6 col-md-6 col-md-push-6 col-lg-6 col-lg-push-6">
+
+        <div class="photos">
+
+        <div class="author">
+        </div>
+        <ul>
+        <li class="quote-1 active"><a href="#"><img class="img-responsive" src="images/client/client1.jpg" alt="Tom Smith - Founder" /></a></li>
+        <li class="quote-2"><a href="#"><img class="img-responsive" src="images/client/client2.jpg" alt="Sarah Doe - Designer" /></a></li>
+        <li class="quote-3"><a href="#"><img class="img-responsive" src="images/client/client3.jpg" alt="Sam Peterson - Developer" /></a></li>
+        <li class="quote-4"><a href="#"><img class="img-responsive" src="images/client/client4.jpg" alt="John Smith - Developer" /></a></li>
+        <li class="quote-5"><a href="#"><img class="img-responsive" src="images/client/client5.jpg" alt="Natasha Smith - Project Manager" /></a></li>
+        <li class="quote-6"><a href="#"><img class="img-responsive" src="images/client/client6.jpg" alt="Jessica Doe - Designer" /></a></li>
+        </ul>
+        </div>
+        </div>
+
+        <div class="col-sm-6 col-md-6 col-lg-6 col-sm-pull-6 col-md-pull-6 col-lg-pull-6">
+
+        <div class="quotes">
+        <ul>
+        <li class="quote-1 active">
+
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p></li>
+        <li class="quote-2">
+
+        <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p></li>
+        <li class="quote-3">
+
+        <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></li>
+        <li class="quote-4">
+
+        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p></li>
+        <li class="quote-5">
+
+        <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></li>
+        <li class="quote-6">
+
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p></li>
+        </ul>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div></section><section class="section blog">
+
+        <div class="container"><h1 class="h1">Our Blog</h1>
+
+        <div class="row">
+
+        <div class="col-sm-6 col-md-6 col-lg-6 blog-post"><article class="article">
+
+        <div class="article-media"><a href="#"><img class="img-responsive" src="images/blog/blog-post1.jpg" alt="blog-article" /></a>
+        </div>
+
+        <div class="article-body"><h4 class="h4 article-title"><a href="#">Example Blog Post</a></h4>
+
+        <div class="article-tag"><i class="fa fa-tag"></i><a href="#">Dinner</a>
+
+        <span class="separator">|
+        </span><a href="#">Kitchen</a>
+
+        <span class="separator">|
+        </span><a href="#">Harvesting</a>
+        </div>
+
+        <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived when an unknown printer type and specimen book.</p>
+
+        <div class="read-more"><a href="#">Read More</a><i class="fa fa-comment pull-right"> 08</i>
+        </div>
+        </div></article>
+        </div>
+
+        <div class="col-sm-6 col-md-6 col-lg-6 blog-post"><article class="article">
+
+        <div class="article-media"><a href="#"><img class="img-responsive" src="images/blog/blog-post2.jpg" alt="blog-article" /></a>
+        </div>
+
+        <div class="article-body"><h4 class="h4 article-title"><a href="#">Example Blog Post</a></h4>
+
+        <div class="article-tag"><i class="fa fa-tag"></i><a href="#">Dinner</a>
+
+        <span class="separator">|
+        </span><a href="#">Kitchen</a>
+
+        <span class="separator">|
+        </span><a href="#">Harvesting</a>
+        </div>
+
+        <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived when an unknown printer type and specimen book.</p>
+
+        <div class="read-more"><a href="#">Read More</a><i class="fa fa-comment pull-right"> 08</i>
+        </div>
+        </div></article>
+        </div>
+
+        <div class="col-sm-6 col-md-6 col-lg-6 blog-post"><article class="article">
+
+        <div class="article-media"><a href="#"><img class="img-responsive" src="images/blog/blog-post3.jpg" alt="blog-article" /></a>
+        </div>
+
+        <div class="article-body"><h4 class="h4 article-title"><a href="#">Example Blog Post</a></h4>
+
+        <div class="article-tag"><i class="fa fa-tag"></i><a href="#">Dinner</a>
+
+        <span class="separator">|
+        </span><a href="#">Kitchen</a>
+
+        <span class="separator">|
+        </span><a href="#">Harvesting</a>
+        </div>
+
+        <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived when an unknown printer type and specimen book.</p>
+
+        <div class="read-more"><a href="#">Read More</a><i class="fa fa-comment pull-right"> 08</i>
+        </div>
+        </div></article>
+        </div>
+
+        <div class="col-sm-6 col-md-6 col-lg-6 blog-post"><article class="article">
+
+        <div class="article-media"><a href="#"><img class="img-responsive" src="images/blog/blog-post4.jpg" alt="blog-article" /></a>
+        </div>
+
+        <div class="article-body"><h4 class="h4 article-title"><a href="#">Example Blog Post</a></h4>
+
+        <div class="article-tag"><i class="fa fa-tag"></i><a href="#">Dinner</a>
+
+        <span class="separator">|
+        </span><a href="#">Kitchen</a>
+
+        <span class="separator">|
+        </span><a href="#">Harvesting</a>
+        </div>
+
+        <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived when an unknown printer type and specimen book.</p>
+
+        <div class="read-more"><a href="#">Read More</a><i class="fa fa-comment pull-right"> 08</i>
+        </div>
+        </div></article>
+        </div>
+
+        <div class="col-sm-6 col-md-6 col-lg-6 blog-post"><article class="article">
+
+        <div class="article-media"><a href="#"><img class="img-responsive" src="images/blog/blog-post5.jpg" alt="blog-article" /></a>
+        </div>
+
+        <div class="article-body"><h4 class="h4 article-title"><a href="#">Example Blog Post</a></h4>
+
+        <div class="article-tag"><i class="fa fa-tag"></i><a href="#">Dinner</a>
+
+        <span class="separator">|
+        </span><a href="#">Kitchen</a>
+
+        <span class="separator">|
+        </span><a href="#">Harvesting</a>
+        </div>
+
+        <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived when an unknown printer type and specimen book.</p>
+
+        <div class="read-more"><a href="#">Read More</a><i class="fa fa-comment pull-right"> 08</i>
+        </div>
+        </div></article>
+        </div>
+
+        <div class="col-sm-6 col-md-6 col-lg-6 blog-post"><article class="article">
+
+        <div class="article-media"><a href="#"><img class="img-responsive" src="images/blog/blog-post6.jpg" alt="blog-article" /></a>
+        </div>
+
+        <div class="article-body"><h4 class="h4 article-title"><a href="#">Example Blog Post</a></h4>
+
+        <div class="article-tag"><i class="fa fa-tag"></i><a href="#">Dinner</a>
+
+        <span class="separator">|
+        </span><a href="#">Kitchen</a>
+
+        <span class="separator">|
+        </span><a href="#">Harvesting</a>
+        </div>
+
+        <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived when an unknown printer type and specimen book.</p>
+
+        <div class="read-more"><a href="#">Read More</a><i class="fa fa-comment pull-right"> 08</i>
+        </div>
+        </div></article>
+        </div>
+        </div>
+        </div></section><section class="section contact">
+
+        <div class="center-box">
+
+        <div class="contact-holder">
+
+        <div class="container">
+
+        <div class="row">
+
+        <div class="col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+
+        <div class="contact-box"><h3 class="h3 lead">Think we might help?</h3><h3 class="h3 lead">We’d love to hear from you.</h3><a data-toggle="modal" class="submit btn btn-info btn-block" role="button" href="#contact">Write for us</a>
+        </div>
+
+        <div class="contact-box"><h3 class="h3">Where we are</h3><address> ThemeArt
+        <br /> 33 Street Name
+        <br /> New York, NY 12345
+        <br /></address><address><i class="fa fa-phone"></i><abbr title="Phone">P:</abbr> (123) 456-789 </address><address> Contact :
+        <br /><i class="fa fa-envelope-o"></i><a href="mailto:#">info@crubod.com</a></address>
+        </div>
+        </div>
+
+        <div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <div class="modal-dialog">
+
+        <div class="contact-box"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+        <form name="contactform" id="contactform" action="php/contactform.php" method="post" />
+
+        <fieldset><h4 class="h4">Write for us</h4>
+
+        <div class="form-group"><i class="fa fa-user"></i>
+        <input type="text" name="name" id="name" class="form-control" placeholder="Name (required)" required="" />
+        </div>
+
+        <div class="form-group"><i class="fa fa-envelope"></i>
+        <input type="email" name="email" id="email" class="form-control" placeholder="Email (required)" required="" />
+        </div>
+
+        <div class="form-group"><i class="fa fa-edit"></i>
+        <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message (required)" required="">
+        </textarea>
+        </div>
+
+        <div class="form-group"><i class="fa fa-arrow-right"></i><button type="submit" id="submit" class="btn btn-info btn-block">Send</button>
+        </div>
         </fieldset>
-      </form>
-    </div>
-    <!--contact form ends--> 
-    
-    <!--address / social starts-->
-    <div class="column one-third address">
-      <ul class="social">
-        <li style="display:none;"><a href="#"><img src="images/icons/social-footer-dribbble.png" width="46" height="46" alt="icon"></a></li>
-        <li><a href="skype:crubod?call"><img src="images/icons/social-footer-skype.png" width="46" height="46" alt="icon"></a></li>
-        <li><a target="_blank" href="https://www.facebook.com/crubod"><img src="images/icons/social-footer-facebook.png" width="46" height="46" alt="icon"></a></li>
-        <li><a target="_blank" href="https://twitter.com/crubod"><img src="images/icons/social-footer-twitter.png" width="46" height="46" alt="icon"></a></li>
-      </ul>
-      <div class="contact_info"> <a href="mailto:info@crubod.com" >info@crubod.com</a>
-        <p>+91 (0) 8890467032</p>
-      </div>
-      <p>New Delhi, India </p>
-    </div>
-    <!--address / social ends--> 
-    
-    <!--twitter starts-->
-    <div class="columns sixteen twitter-wrapper">
-      <p> From Twitter : </p>
-      <div class="twitter"></div>
-    </div>
-    <!--twitter ends--> 
-    
-  </div>
-  
-  <!--footer starts-->
-  <div id="footer">
-    <p>crubod © 2014. All Rights Reserved.</p>
-    <ul style="display:none;">
-      <li><a href="#">Terms of use </a></li>
-      <li><a href="#">Privacy policy</a></li>
-    </ul>
-    <div class="clear"></div>
-  </div>
-  <!--footer ends-->
-  
-  <div class="clear"></div>
-</div>
-<!--contact section ends--> 
+        </form>
 
-<!--scroll to top arrow--> 
-<a class="scrollToTop"></a> 
+        <div id="state-message">
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
 
-<!--other jqueries required--> 
-<script src="js/jquery.easing.1.3.js" type="text/javascript"></script> 
-<script src="twitter/twitter.js" type="text/javascript"></script> 
-<script src="js/custom.js" type="text/javascript"></script>
-</body>
+        <div id="map">
+        </div></section><section class="section follow">
+
+        <div class="center-box">
+
+        <div class="container">
+
+        <div class="row load-tweets">
+        </div>
+
+        <div class="row">
+
+        <div class="socialize"><h2 class="h2">Let's Socialize</h2>
+        </div>
+        </div>
+
+        <div class="row">
+        <ul id="social-networks">
+        <li class="social-twitter"><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter fa-4x"></i></a></li>
+        <li class="social-facebook"><a href="http://www.facebook.com" target="_blank"><i class="fa fa-facebook fa-4x"></i></a></li>
+        <li class="social-googleplus"><a href="http://www.google.com" target="_blank"><i class="fa fa-google-plus fa-4x"></i></a></li>
+        <li class="social-youtube"><a href="http://www.youtube.com" target="_blank"><i class="fa fa-youtube fa-4x"></i></a></li>
+        <li class="social-pinterest"><a href="http://www.pinterest.com" target="_blank"><i class="fa fa-pinterest fa-4x"></i></a></li>
+        <li class="social-dribbble"><a href="http://www.dribbble.com" target="_blank"><i class="fa fa-dribbble fa-4x"></i></a></li>
+        <li class="social-linkedin"><a href="http://www.linkedin.com" target="_blank"><i class="fa fa-linkedin fa-4x"></i></a></li>
+        <li class="social-flickr"><a href="http://www.flickr.com" target="_blank"><i class="fa fa-flickr fa-4x"></i></a></li>
+        </ul>
+        </div>
+        </div>
+        </div></section>
+        </div>
+        </div>
+        <script src="js/jquery.ascensor.js">
+        </script>
+        <script src="js/bootstrap.min.js">
+        </script> 
+        <script src="js/jquery.mixitup.min.js">
+        </script>
+        <script src="js/jquery.hoverdir.js">
+        </script> 
+        <script src="js/jquery.placeholder.min.js">
+        </script>
+        <script type="text/javascript">$(document).ready(function(){$("#ascensor").ascensor({ascensorMap:[[0,0],[1,0],[2,0],[3,0],[4,0],[5,0],[6,0],[7,0],[8,0]]})});
+        </script> 
+        <script src="js/main.js">
+        </script>
+    </body>
 </html>
