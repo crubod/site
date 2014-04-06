@@ -301,6 +301,23 @@ Portfolio
 	transform: translate3d(6px, -6px, 0);
 	z-index: 100;
 }
+#grid li a.project-website {
+	display: inline-block;
+	position: static;
+	color: #FFF;
+}
+#grid li a.project-website:hover {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-o-box-shadow: none;
+	-webkit-transform: translate3d(0px, 0px, 0);
+	-moz-transform: translate3d(0px, 0px, 0);
+	-ms-transform: translate3d(0px, 0px, 0);
+	-o-transform: translate3d(0px, 0px, 0);
+	transform: translate3d(0px, 0px, 0);
+	color: #858585;
+}
 #grid li a img {
 	width: 100%;
 	height: 100%;
@@ -704,6 +721,10 @@ Blog
 	margin-top: 30px;
 	margin-bottom: 10px;
 }
+.job-post {
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
 .blog-post .article {
 	width: 100%;
 	min-height: 500px;
@@ -979,6 +1000,18 @@ Follow
 }
 .company-name img {
 	width: 600px;
+}
+.center {
+	text-align: center;
+}
+label.lbl {
+	font-weight: bold;
+	display: inline-block;
+	min-width: 150px;
+}
+label.info {
+	font-weight: normal;
+	display: inline-block;
 }
 /* ==============================================
 Media Query
