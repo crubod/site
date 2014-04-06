@@ -122,7 +122,7 @@ jQuery(function( $ ){
 		
 		$('.client .photos ul li.active').removeClass('active');
 		
-		randomnumber = Math.floor( (Math.random()*6) + 1 );
+		randomnumber = Math.floor( (Math.random()*2) + 1 );
 		
 		author = $('.client .photos ul li.quote-' + randomnumber).find('img').attr('alt');
 		author = author.split('-');
