@@ -103,7 +103,8 @@ jQuery(function( $ ){
 		
 		author = $(this).find('img').attr('alt');
 		author = author.split('-');
-		author = author[0] + '<span> - ' + author[1] + '</span>';
+		//author = author[0] + '<span> - ' + author[1] + '</span>';
+		author = author[0];
 		
 		$('.client .quotes ul li.active').fadeOut('slow', function(){
 			$(this).removeClass('active');
@@ -126,7 +127,8 @@ jQuery(function( $ ){
 		
 		author = $('.client .photos ul li.quote-' + randomnumber).find('img').attr('alt');
 		author = author.split('-');
-		author = author[0] + '<span> - ' + author[1] + '</span>';
+		//author = author[0] + '<span> - ' + author[1] + '</span>';
+		author = author[0];
 		
 		$('.client .quotes ul li.active').fadeOut('slow', function(){
 			$(this).removeClass('active');
