@@ -65,11 +65,15 @@ $(document).ready(function () {
 			$('#state-message').hide();
 			
 			// fire base 
-			var formRef = new Firebase('https://crubod.firebaseio.com/contact-form/data');
-			formRef.child('name').set($('#name').val());
-			formRef.child('email').set($('#email').val());
-			formRef.child('message').set($('#message').val());
-
+			var formRef = new Firebase('https://crubod.firebaseio.com/contactform'),
+			commentPushRef = formRef.push();
+			//comments = $firebase(ref.child('comments'));
+			commentPushRef.set({
+				"name": $('#name').val(),
+				"email": $('#email').val(),
+				"message": $('#message').val()
+			});
+			
 			document.getElementById('state-message').innerHTML = "Successfully Submitted";
 			$('#state-message').slideDown('slow');
 			$('#contactform img.loader').fadeOut('slow',function(){$(this).remove()});
@@ -154,7 +158,7 @@ Firebase
 
     function addComment() {
     	var dataRef = new Firebase("https://crubod.firebaseio.com");
-        dataRef.set("I am now writing data into Firebase!");
+       // dataRef.set("I am now writing data into Firebase!");
 
 
 
