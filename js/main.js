@@ -62,25 +62,22 @@ $(document).ready(function () {
 		var action = $(this).attr('action');
 		
 		$("#state-message").slideUp(750,function() {
-		$('#state-message').hide();
-		
-		$.post(action, { 
-			name: $('#name').val(),
-			email: $('#email').val(),
-			message: $('#message').val()
-		},
-			function(data){
-				document.getElementById('state-message').innerHTML = data;
-				$('#state-message').slideDown('slow');
-				$('#contactform img.loader').fadeOut('slow',function(){$(this).remove()});
-				$('#submit').removeAttr('disabled'); 
-				if(data.match('success') != null) $('#contactform').slideUp('slow');
-			}
-		);
+			$('#state-message').hide();
+			
+			// fire base 
+			var formRef = new Firebase('https://crubod.firebaseio.com/contact-form/data');
+			formRef.child('name').set($('#name').val());
+			formRef.child('email').set($('#email').val());
+			formRef.child('message').set($('#message').val());
+
+			document.getElementById('state-message').innerHTML = "Successfully Submitted";
+			$('#state-message').slideDown('slow');
+			$('#contactform img.loader').fadeOut('slow',function(){$(this).remove()});
+			$('#submit').removeAttr('disabled'); 
+			$('#contactform').slideUp('slow');
 		});
 		return false; 
 	});
-
 });
 
 /* ==============================================
@@ -150,3 +147,15 @@ Loading
 $(window).load(function(){
 	jQuery('#loading').fadeOut(1000);
 });
+
+/* ==============================================
+Firebase
+=============================================== */
+
+    function addComment() {
+    	var dataRef = new Firebase("https://crubod.firebaseio.com");
+        dataRef.set("I am now writing data into Firebase!");
+
+
+
+    }
